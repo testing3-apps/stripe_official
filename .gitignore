@@ -3,7 +3,7 @@
 /node_modules
 /views/css
 /views/js
-/views/templates/front/
+/views/templates/front/*
 
 # @TODO We should probably git composer.lock
 composer.lock
