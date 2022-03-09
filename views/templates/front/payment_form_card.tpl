@@ -37,8 +37,8 @@
                 </div>
             </div>
         {/if}
-
-        <p class="card-payment-informations">{l s='Pay now with the card saved in your device by clicking on the button above or fill in your card details below and submit at the end of the page' mod='stripe_official'}</p>
+<p><img src="https://www.sewsweetly.com/modules/paypalusa/img/secure-icon.png" style="padding:0 5px 3px 0;">Pay With Credit or Debit Card</p>
+        <p class="card-payment-informations">{l s='Pay now with the card saved in your device by clicking on the button above, or fill in your card details below.' mod='stripe_official'}</p>
     {/if}
 
     <input type="hidden" name="stripe-payment-method" value="card">
@@ -94,6 +94,8 @@
             <input name="cardholder-name" type="text"  autocomplete="off" id="stripe-card-cardholdername" class="stripe-name" data-stripe="name" value="{if isset($customer_name)}{$customer_name|escape:'htmlall':'UTF-8'}{/if}"/>
         {/if}
     {/if}
+	
+	<p style="font-size: small; color: #2196f3; width: 450px; max-width: 100%;">Currently, only MasterCard and Visa are supported for card payment. Please use the PayPal payment option if you have any other card.</p>
 
     {if $stripe_save_card == 'on'}
         {if $show_save_card === true}
@@ -110,7 +112,7 @@
     {/if}
 
     {if isset($prestashop_version) && $prestashop_version == '1.6'}
-        <button class="stripe-submit-button" data-method="card">{l s='Buy now' mod='stripe_official'}</button>
+        <button class="stripe-submit-button" data-method="card">{l s='Buy Now' mod='stripe_official'}</button>
     {/if}
 
     {if $stripe_reinsurance_enabled == 'on'}
